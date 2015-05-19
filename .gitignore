@@ -6,4 +6,7 @@
 *.out
 *.pdf
 *.synctex.gz
+*.ilg
+*.ind
 auto
+contributed-books-template
