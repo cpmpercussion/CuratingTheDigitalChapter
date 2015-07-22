@@ -580,7 +580,10 @@ the iPads themselves as well as with a server application.
 
 During performances with our iPad apps, all touch interactions are
 transmitted as OSC messages over a Wi-Fi network from the iPads to
-server software running on a laptop, or on a remote server. When our
+server software running on a laptop, or on a remote server.
+Information about the performer's gestural and ensemble state are
+similarly sent back from the server to the iPads. A complete listing
+of our OSC messaging scheme is given in Table \ref{oscschema}. When our
 server receives one of these OSC messages, it assigns it a timestampe
 and records it to a text file for later analysis. Each line of the
 text file is written in the CSV (comma separated values) format.
@@ -589,29 +592,28 @@ different numbers of parameters, these can be trivially separated or
 reorganised by filtering through the unique OSC address of each type
 of message. 
 
-Messages are sent in response to three of the four touch-events in
-iOS, \texttt{touchesBegan}, \texttt{touchesMoved}, and
-\texttt{touchesEnded}. Both \texttt{touchesBegan} and
-\texttt{touchesMoved} are recorded using a \texttt{/metatone/touch}
-message recording the iPad's app-level unique device ID. The velocity
-of \texttt{touchesMoved} messages is recorded while
-\texttt{touchesBegan} messages are distinguished by having a velocity
-of zero. A \texttt{/metatone/touch/ended} message is used to record
-\texttt{touchesEnded} events. \texttt{touchesCancelled} messages are
-ignored.
+Our iPad apps send messages to the server in response to three of the
+four touch-events in iOS, \texttt{touchesBegan},
+\texttt{touchesMoved}, and \texttt{touchesEnded}. Both the beginning
+and movements of touches are recorded using a \texttt{/touch} message
+recording the iPad's app-level unique device ID. The velocity of
+\texttt{touchesMoved} messages is recorded while \texttt{touchesBegan}
+messages are distinguished by having a velocity of zero. A
+\texttt{/touch/ended} message is used to record \texttt{touchesEnded}
+events. \texttt{touchesCancelled} messages are ignored.
  
 Each of our iPad apps contains a small number of button and switch UI
 elements that are used in the performances to activate looping
 functions, algorithmically generated backing sounds, and to change the
 timbre and pitch of sounds available through the touch interface. The
 performers' interactions with these elements are recorded using
-\texttt{/metatone/switch} messages which record the iPad device ID,
+\texttt{/switch} messages which record the iPad device ID,
 the name of the UI element and its new state.
 
 During performances, our iPad apps send messages to the other apps
 performing while connected on the same local network. These messages
 are also copied to the server software using the
-\texttt{/metatone/app} OSC address.
+\texttt{/app} OSC address.
 
 As will be described in later sections, our server software has the
 capacity to identify the performers' touch gestures in real-time
@@ -621,16 +623,14 @@ of peak gestural change where the group may have moved onto a new
 musical section. While this information is recorded for later
 analysis, it is also returned to the performers' apps, which use it to
 update their interfaces and present new performance possibilities to
-the performers~\cite{Martin:2015jk}. Our protocol for performance logging includes three
-OSC messages from the server to the iPad apps. Gesture classifications
-are returned to the iPads each second using the OSC address
-\texttt{/metatone/classifier/gesture}; whenever a new musical section
-is detected, the server sends a
-\texttt{/metatone/classifier/ensemble/event/new\_idea} message to all
+the performers~\cite{Martin:2015jk}. Our protocol for performance
+logging includes three OSC messages from the server to the iPad apps.
+Gesture classifications are returned to the iPads each second with OSC
+\texttt{/gesture} messages; whenever a new musical section is
+detected, the server sends a \texttt{/event/new\_idea} message to all
 connected iPads; finally, various measures of the ensemble state are
 returned to the iPads each second using the OSC address,
-\texttt{/metatone/classifier/ensemble/state}, although this
-functionality is still in development.
+\texttt{/state}, although this functionality is still in development.
 
 This scheme for logging touch-interactions (see table \ref{oscschema})
 was chosen to study the process of improvising with iPad instruments
@@ -673,12 +673,13 @@ representative artefacts along with audio and video recordings.
   \hline
   \end{tabular}
 \end{center}
-  \caption{Scheme for OSC messages from the Metatone iPad apps. The
-    touch and touch ended messages record touch screen interactions
-    directly from the iOS operating system (see Figure /ref{touch-event-code-listing}. The
-    switch message was used to record interactions with UI elements
-    (switches and buttons) present in our app where the name of the
-    element is given as a string in the message.}
+\caption{Scheme for OSC messages from the Metatone iPad apps. The
+  touch and touch ended messages record touch screen interactions
+  directly from the iOS operating system (see Figure
+  /ref{touch-event-code-listing}. 
+  The ``device'' parameters are unique identifiers for each iPad in
+  the ensemble.
+}
   \label{oscschema} 
 \end{table}
 
@@ -885,14 +886,42 @@ every ten seconds.
 \subsection{Visualisations}
 \label{subsec:visualisations}
 
-To understand the structure of the improvised performances we wanted a
-visual representation of the performers' touch gestures to watch
-alongside the audio and video recordings of each performance. A
-Processing sketch was produced that read the captured log files and
-rendered an animation of all four players' touches in the space of one
-iPad screen with different players distinguished by colour. The sketch
-also draws a date and time stamp on each frame as well as text
-notifications of switch and button messages.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.9\textwidth]{figures/metatone-visualisation-metalonsdale}
+  \includegraphics[width=0.9\textwidth]{figures/metatone-visualisation-youarehere}
+  \includegraphics[width=0.9\textwidth]{figures/metatone-visualisation-touchandtone}
+  % \includegraphics[width=0.5\textwidth]{figures/metatoneanimation1}
+  % \includegraphics[width=0.5\textwidth]{figures/metatoneanimation3}
+  % \includegraphics[width=0.5\textwidth]{figures/metatoneanimation2}
+  \caption{Stills from hybrid visualisations of three Ensemble Metatone
+    performances showing video, touch animations, and gesture scores.
+    From top to bottom, MetaLonsdale in Canberra, August 2013, Study
+    in Bowls in Canberra, March 2014, and Touch and Tone in Boston,
+    May 2014.}
+  \label{fig:metatone-visualisations}
+\end{figure}
+
+
+To understand the structure of the improvised performances we have
+developed method for translating touch and gesture protocols into
+animated visual represenations of the performance that can accompany
+the audio and video recordings in the documentation of each
+performance. Two animations are typically produced for each research-focussed
+performance one of the performer's touches and another for the
+gesture classifications and new-idea divisions. 
+
+The Processing~\cite{Reas:2006kq} programming language has been used
+to produce software that animates the logs of performers' touches over
+each performance. Our program reads a captured log file and renders an
+animation of all four players' touches overlaid in the space of one
+iPad screen with the different players distinguished by colour. Each
+touch point is represented by a circle that fades away for about a
+second allowing different types of swirl, swipe, and tap gestures to
+be distinguished at a glance. The software also draws a date and
+time-stamp in each frame as well as text notification of app and
+switch messages.
 
 The resulting animations presents an entirely new view of the
 performance which was not visible to the performers or audience on the
@@ -903,20 +932,19 @@ view, the animation also gives a ``performer's perspective'' on touch
 interaction, allowing us to connect patterns of touches with musical
 gestures that the performers discuss after rehearsals.
 
-\begin{figure}
-  \centering
-  \includegraphics[width=0.9\textwidth]{figures/metatone-visualisation-metalonsdale}
-  \includegraphics[width=0.9\textwidth]{figures/metatone-visualisation-touchandtone}
-  \includegraphics[width=0.9\textwidth]{figures/metatone-visualisation-youarehere}
-  % \includegraphics[width=0.5\textwidth]{figures/metatoneanimation1}
-  % \includegraphics[width=0.5\textwidth]{figures/metatoneanimation3}
-  % \includegraphics[width=0.5\textwidth]{figures/metatoneanimation2}
-   \caption{Stills from hybrid visualisations of Ensemble Metatone
-     performances showing video, touch animations, and gesture scores.
-   From top to bottom, MetaLonsdale in Canberra, August 2013, Touch
-   and Tone in Boston, May 2014, and Study in Bowls in Canberra, March 2014.}
-  \label{metatoneanimation3}
-\end{figure}
+Another Processing program is used to create an animated version of
+the gesture-scores discussed in Section
+\ref{subsec:gesture-classification}, with an integrated playhead that
+indicates the current position in the performance. While these
+components can be viewed separately, they are most useful when played
+together and Figure \ref{fig:metatone-visualisations} shows multiple
+screenshots from recordings of different performances where the two
+visualisations have been compined with multiple camera angles of video
+as well as audio recordings of the performances.
+
+
+
+
 
 
 \section{Conclusions}
