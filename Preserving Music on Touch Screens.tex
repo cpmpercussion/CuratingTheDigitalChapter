@@ -75,7 +75,7 @@ and the history of music abounds with technologies and traditions to
 grab hold of musical performances, recording them in some format to be
 archived, understood, and developed. All of our traditions of musical
 recording, from rote-learning and notation, to the phonograph and
-digital recording, have contributed to the ability of performers to
+digital audio, have contributed to the ability of performers to
 create new musical works and to the place of music in our cultural
 landscape.
 
@@ -110,7 +110,7 @@ We argue that this protocol can serve as an archival format that
 addresses many of the issues with curating improvised music for the
 specific case of performances on touch-screens. Not only does it allow
 a much more comprehensive documentation of the performances, but it
-allows these performances to be characterised, analyised, and
+allows these performances to be characterised, analysed, and
 appraised through statistics calculated on the touch and gestural data
 which is abstracted from the particular instruments used or the
 musicians who played them. We also show how logs of touch-screen
@@ -153,8 +153,8 @@ touch-screen instruments.
 
 The development of our touch-screen instruments and performance
 logging protocol was a percussionist-centred process. Performances and
-rehearsals, of Ensemble Metatone a free-improvising percussion
-ensemble were conducted to explore and evaluate instruments and our
+rehearsals of Ensemble Metatone, a free-improvising percussion
+ensemble, were conducted to explore and evaluate instruments. Our
 performance logging protocol was developed to document and analyse
 these activities. Before detailing the protocol and instruments it is
 worth considering why percussive improvisation is a useful process not
@@ -215,22 +215,23 @@ gestures for ``playing'' the snow, with a pair of symbols (see Figure
 gesture as well as hand position in the bowl.
 
 \begin{table}\centering
-\begin{tabular}{|l|}
-\hline
-touch lightly \\
-fingers tapping \\
-sift through fingers \\
-with closed fist\\
-crush in hand\\
-pat with open palm\\
-drop handful\\
-flick with fingernail\\
-draw line\\
-resonant thump\\
-press on surface\\
-swish with palm\\
-\hline
-\end{tabular}
+\includegraphics[width=0.4\columnwidth]{figures/syntaxofsnow-vocabulary}
+% \begin{tabular}{|l|}
+% \hline
+% touch lightly \\
+% fingers tapping \\
+% sift through fingers \\
+% with closed fist\\
+% crush in hand\\
+% pat with open palm\\
+% drop handful\\
+% flick with fingernail\\
+% draw line\\
+% resonant thump\\
+% press on surface\\
+% swish with palm\\
+% \hline
+% \end{tabular}
 \label{tab:SyntaxOfSnowGestures}
 \caption{The vocabulary of gestures to perform on the amplified snow
   in Burtner's \emph{Syntax of Snow}. Each gesture is represented by a
@@ -376,16 +377,6 @@ can be generated from this archive of performance documentation.
 % alogrithmically produced background sounds. A button on both apps
 % allowed the performer to shuffle the available sounds.
 
-\begin{figure}
-  \centering
-  \includegraphics[width=0.5\textwidth]{figures/metatoneanimation1}
-  \includegraphics[width=0.5\textwidth]{figures/metatoneanimation3}
-  \includegraphics[width=0.5\textwidth]{figures/metatoneanimation2}
-   \caption{Stills from an animation of an Ensemble Metatone
-     performance. The full animation can be viewed online\footref{note1}.}
-  \label{metatoneanimation3}
-\end{figure}
-
 \section{Curating the Improvised}
 
 Although the field of improvised performance has a developing
@@ -401,7 +392,7 @@ as produced in real-time as additional aspects of the live improvised work.
 
 \begin{figure}
   \centering
-  \includegraphics[width=\textwidth]{figures/ensemblemetatone}
+  \includegraphics[width=0.7\textwidth]{figures/ensemblemetatone}
   \caption{Ensemble Metatone performing \emph{MetaLonsdale} at the ANU
     School of Art Gallery in October 2013 (left to right: Jonathan
     Griffiths, Charles Martin, Christina Hopgood, Yvonne Lam).}
@@ -659,21 +650,21 @@ representative artefacts along with audio and video recordings.
 
 \begin{table}
   \begin{center}
-  App to Server Messages:\\
-
   \begin{tabular}{|l|l|}
+  \hline
+  App to Server Messages: &\\
   \hline
   OSC Address           & Parameters \\ 
   \hline
   \texttt{/metatone/online}      & device  \\     
   \texttt{/metatone/touch}       & device, X, Y, velocity \\
   \texttt{/metatone/touch/ended} & device \\  
-  \texttt{/metatone/switch}      & device, switch name, position\\
-  \texttt{/metatone/app}         & device, message name, message state\\
+  \texttt{/metatone/switch}      & device, name, position\\
+  \texttt{/metatone/app}         & device, name, state\\
   \hline
-  \end{tabular}\\
-  Server to App Messages:\\
-  \begin{tabular}{|l|l|}
+  % \end{tabular}\\
+  Server to App Messages:&\\
+  % \begin{tabular}{|l|l|}
   \hline
   OSC Address           & Parameters \\ \hline
   \texttt{/metatone/classifier/gesture} & device, gesture type\\
@@ -912,6 +903,20 @@ view, the animation also gives a ``performer's perspective'' on touch
 interaction, allowing us to connect patterns of touches with musical
 gestures that the performers discuss after rehearsals.
 
+\begin{figure}
+  \centering
+  \includegraphics[width=0.9\textwidth]{figures/metatone-visualisation-metalonsdale}
+  \includegraphics[width=0.9\textwidth]{figures/metatone-visualisation-touchandtone}
+  \includegraphics[width=0.9\textwidth]{figures/metatone-visualisation-youarehere}
+  % \includegraphics[width=0.5\textwidth]{figures/metatoneanimation1}
+  % \includegraphics[width=0.5\textwidth]{figures/metatoneanimation3}
+  % \includegraphics[width=0.5\textwidth]{figures/metatoneanimation2}
+   \caption{Stills from hybrid visualisations of Ensemble Metatone
+     performances showing video, touch animations, and gesture scores.
+   From top to bottom, MetaLonsdale in Canberra, August 2013, Touch
+   and Tone in Boston, May 2014, and Study in Bowls in Canberra, March 2014.}
+  \label{metatoneanimation3}
+\end{figure}
 
 
 \section{Conclusions}
@@ -935,7 +940,8 @@ instruments. The representations could also be used in performance as
 visual accompaniments for the audience or displayed to the players as
 real-time feedback.
 
-\bibliographystyle{spphys}
+%\bibliographystyle{spphys}
+\bibliographystyle{plain}
 \bibliography{2013ComputerMusic}
 \end{document}
 
