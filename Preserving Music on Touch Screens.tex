@@ -43,10 +43,10 @@
   representations of the musical work. This paper presents a protocol
   for recording ensemble touch-screen performances and details the
   processes for generating visualisations, gestural classifications,
-  and graphical scores from these logs. The experience of using these
+  and graphical scores from these logs. Our experience of using these
   new representations to study a series of improvised ensemble
   performances with iPad-based digital musical instruments leads us to
-  conclude that these recordings are new-media artefacts that allow
+  conclude that these new-media artefacts allow
   unique insights into ensemble interactions, comprehensive archiving
   of improvised performances, and the potential for resynthesis into
   new performances and artworks.}
@@ -78,10 +78,9 @@ As an artistic experience, musical performance is fleetingly temporal
 and the history of music abounds with technologies and traditions to
 grab hold of musical performances, recording them in some format to be
 archived, understood, and developed. All of our traditions of musical
-recording, from rote-learning and notation, to the phonograph and
-digital audio, have contributed to the ability of performers to
-create new musical works and to the place of music in our cultural
-landscape.
+recording, from notation, to the phonograph, to digital audio, have
+contributed to the ability of performers to create new musical works
+and to the place of music in our cultural landscape.
 
 While western classial music is often defined by the
 score~\cite{Davies:1991tw}, and popular music by the song or the
@@ -92,23 +91,23 @@ notes to play are made in the moment by individual musicians with the
 work ending only when all performers have stopped
 playing~\cite{Cahn:2005uq}. With each performance equally identifiable
 as a different work, the output of free-improvisation ensembles is
-often represented only as audio recordings with documented changes in
-personnel or instrumentation the main indicator of difference between
-works. Such archives of free-improvised performances can be
-time-consuming to browse due to the temporal nature of the recordings
-and difficult to analyse, particularly when performers use similar
-sounding electro-acoustic instruments. When performing with
-computer-based instruments, however, musicians have the opportunity to
-record the musical work in an extremely detailed form by capturing a
-log of their interactions as well as audio or video recordings. The
-log itself can serve as a kind of score but also affords the creation
-of other representations of the performance giving curators of
-free-improvisation new perspectives on the musical works and the
-improvisers themselves ways to develop and preserve their artistic
-practice.
+often represented as audio recordings with liner notes that document
+changes in personnel or instrumentation. These notes are frequently
+the main indicator of difference between works. Such archives of
+free-improvised performances can be time-consuming to browse due to
+the temporal nature of the recordings and difficult to analyse,
+particularly when performers use similar-sounding electro-acoustic
+instruments. When performing with computer-based instruments, however,
+musicians have the opportunity to record a musical work in an
+extremely detailed form by capturing a log of their interactions as
+well as audio or video recordings. The log itself can serve as a kind
+of score but also affords the creation of other representations of the
+performance giving curators of free-improvisation new perspectives on
+the musical works and the improvisers, themselves, ways to develop and
+preserve their artistic practice.
 
 In this chapter, we present a protocol for automatically documenting
-free-improvised musical performances made on touch-screen computers.
+performances of free-improvised music made on touch-screen computers.
 Our protocol, and the touch-screen instruments with which it is used,
 are designed from a percussionist-centred perspective. Rather than
 particular notes and rhythms, the focus of traditional musical
@@ -119,14 +118,14 @@ most interesting aspects of free-improvised music~\cite{Borgo:2006fv},
 our protocol is designed to connect to multiple touch-screen devices
 engaged in ensemble performance over a local network or the internet.
 
-We argue that this protocol can serve as an archival format that
+We argue that our protocol can serve as an archival format that
 addresses many of the issues with curating improvised music for the
 specific case of performances on touch-screens. Not only does it allow
 a much more comprehensive documentation of the performances, but it
 allows these performances to be characterised, analysed, and appraised
 through statistics calculated on the touch and gestural data. This
-data is abstracted from the particular instruments used or the
-musicians who played them allowing a broad analysis of
+data is abstracted from the particular instruments used, and the
+musicians who played them, allowing a broad analysis of
 free-improvisations. We also show how logs of touch-screen
 performances can become new media art objects in their own right,
 forming a basis for other representations of the improvised musical
@@ -145,11 +144,6 @@ Metatone, a free-improvisation percussion group that participated in a
 longitudinal study over eighteen months performing with our
 touch-screen instruments.
 
-% \footnote{\label{note1}The video recording, touch-interaction log,
-%   visualisation and score of a performance of \emph{MetaLonsdale} is
-%   available online:
-%   \url{http://charlesmartin.com.au/blog/2014/1/17/metalonsdale-for-four-ipads}.}
-
 \section{Percussive Improvisation on touch-screens}
 \label{sec:percussive-interaction}
 
@@ -161,9 +155,9 @@ performance logging protocol was developed over this process to
 document and analyse these activities. The same instruments and tools
 were introduced to other experienced percussionists for subsequent
 performances and have only been used with non-percussionists
-relatively recently. Before detailing the protocol and instruments it
+relatively recently. Before detailing the protocol and instruments, it
 is worth considering why percussive improvisation is a useful process
-not just for exploring musical interaction but for characterising it.
+for characterising musical interaction.
 
 Percussion is an artistic practice defined by an approach to
 interaction rather than by any particular instrument that
@@ -187,21 +181,12 @@ Feldman's \emph{King of Denmark}~\cite{Feldman:1965uq} must design
 their own multi-instrument setup to fit the composer's specifications.
 To meet the requirement for metal instruments, for example, a
 performer might find a car's suspension spring, a saw-blade or create
-a unique object from scratch.
-
-For percussionists, free improvisation is often a process of gestural
-exploration, discovering new sounds from traditional and
-non-traditional instruments and responding to other sounds in an
-ensemble. Like some of the instruments in a modern percussion
-ensemble, touch-screen computing devices can be struck, scraped and
-rubbed with fingers and hands. Their percussive affordances, their
-power to generate computer music and their widespread popularity,
-motivate an exploration of the use of touch-screen devices in a modern
-percussion ensemble.
+a unique object from scratch. This percussive approach to
+investigating new instruments can be applied to touch-screen computers
+which can also be struck, scraped, and rubbed with fingers and hands.
 
 \subsection{Composing with Gestures}
 \label{subsec:composing-gestures}
-
 
 While traditional musical notation specifies sonic outcomes - pitch,
 articulation and rhythm - it is possible to compose music by
@@ -275,8 +260,16 @@ gestures are usually designed to execute a command in software (e.g.
 double tap to open a menu) rather than to create an artistic
 expression. For this reason, characterisations of touch gestures that
 already exist in the HCI literature are unsuitable for characterising
-performative touch gestures which, as we will demonstrate, mainly
-consist of continuous interactions.
+performative touch gestures which mainly consist of continuous
+interactions.
+
+% While these devices can be configured with a wide variety of software
+% with many different kinds of sonic output (we discuss several of our
+% own apps in Section \ref{subsec:metatone-apps}), the touch-screen and
+% its gestural affordances always remains the same. As a result, even
+% though a sonic characterisation may be limited to individual apps, the
+% percussive gestures can be general enough to understand performances on
+% different apps and even different devices.
 
 \subsection{Free-Improvised Performance}
 \label{subsec:free-improvisation}
@@ -335,13 +328,13 @@ game.''~\cite{Mazzola:2009cr}
 
 
 In the present research, an improvising percussion group was not only
-the used to create new music but to explore and evaluate touch-screen
+used to create new music but to explore and evaluate touch-screen
 instruments running on Apple iPads. Ensemble Metatone was brought
-together in Canberra, Australia to study the process performing
+together in Canberra, Australia to study the process of performing
 free-improvised music starting with a prototype app and, through a
 process of iterative design, eventually presenting concerts with
 multiple apps. The members of the group (including one of the authors)
-were all trained in classical percussion and had significant
+were all highly qualified in classical percussion and had significant
 experience as improvisors.
 
 Ensemble Metatone undertook a series of studio rehearsals throughout
@@ -387,57 +380,40 @@ for studying improvisation on touch screens. In the following
 sections, we will describe forms of analysis and derivative works that
 can be generated from this archive of performance documentation.
 
-% Over a series of studio rehearsals, the group worked with the
-% ``MetaLonsdale'' app to develop a work which was performed at
-% festivals and events throughout 2013. The studio rehearsals and a
-% public recital were recorded with seperate tracks of audio for each
-% iPad, multiple camera angles, and a log of touch-interactions.
-
-% The app used a percussion-inspired interaction scheme allowing
-% performers to access pitched percussion sounds and field recordings.
-% Most of the iPad screen was a performance surface with few graphical
-% UI elements. Tapping the screen produced short sounds at a pitch
-% determined by the location of the tap. Swiping played continuous field
-% recordings with volume controlled by the velocity of the swipe. The
-% app featured two UI switches that controlled simple delay functions,
-% that repeat tapped notes, and switchable auto-play features, that
-% alogrithmically produced background sounds. A button on both apps
-% allowed the performer to shuffle the available sounds.
-
 \subsection{Curating the Improvised}
 \label{subsec:curating}
 
 Although the field of improvised performance has a developing
 theoretical background and many highly regarded practitioners,
-particular artistic expressions tend toward the ephemeral. We
-advocate an expanded method of documenting improvised
-music that encodes not just the sounds made in the performance space,
-but performers' music-making gestures and ensemble interactions.
+particular artistic expressions tend toward the ephemeral. We advocate
+an expanded method of documenting improvised music that encodes not
+just the sounds made in the performance space, but performers'
+music-making gestures and ensemble interactions.
 
-It is widely recognised that musical works as well as new media
+It is widely recognised that both musical works and new media
 artefacts can have a number of interacting
 representations~\cite{Rinehart:2007pi}. Musical works might be
-directed by a score; be ``thick'' or ``thin'' depending on the the
-freedom of interpretation afforded the performers; be represented in
-live performance, studio recordings, or by computer generated
+directed by a score; might be ``thick'' or ``thin'' depending on the
+the freedom of interpretation afforded the performers; be represented
+in live performance, studio recordings, or by computer generated
 renderings; and may be composed or improvised~\cite{Davies:2005fj}.
-Combinations of these representations are often collected together
+Combinations of these representations are often collected together to
 form an archive of a musical work.
 
-Free improvised music, where performers do not follow a set musical
+Free-improvised music, where performers do not follow a set musical
 structure, is usually preserved using only audio and video recordings.
 While the improvised solos of famous jazz musicians are often
 transcribed, this is extremely uncommon for free-improvised ensemble
 performances. Audio recordings of free-improvised performances capture
-the sonic results of the performer's explorations of musical gestures
+the sonic results of the performers' explorations of musical gestures
 and interactions with other ensemble members but the original
 performance gestures are lost. For performances with electro-acoustic
 instruments, audio-recordings can be inadequate for detailed analysis
-as it is often difficult to discern which musician is creating
-each sound.
+as it is often difficult to discern which musician is creating each
+sound.
 
 When improvised music is performed on touch-screen instruments, a log
-of touch-interactions captured during the performance can suplements
+of touch-interactions captured during the performance can suplement
 traditional recordings and could take the place of a musical
 ``score''. While scores are generally used for composition, their use
 as documentation for new media artworks has been
@@ -449,23 +425,27 @@ original performance.
 
 Borgo has drawn parallels between the swarm-like collaboration in
 free-improvised performances and the community collaborations that
-define the field: ``One of the particular challenges of contemporary
+define the field: 
+\begin{quote}
+``One of the particular challenges of contemporary
 improvisation, for both players and listeners, is to remain aware of
 and sensitive to the many musical gestures and processes circulating
 between members of the group in the moment of performance and between
 members of the community as ideas circulate via recordings, impromptu
 meetings, and the overlapping personnel of various working
-groups.''~\cite{Borgo:2006fv} These communities of practitioners,
-listeners, and concert organisers are the curators of the
-free-improvised music world. We propose that the ability to thoroughly
-document touch-screen movements of improvising ensembles enhances the
-ability of such a community to develop this artistic practice through
-archiving, replaying, and re-synthesising performances. In Sections
-\ref{sec:protocols} and \ref{sec:analysis}, we describe our approach
-to recording improvised touch-screen performances and transforming
-such transcriptions into animations, gestural scores, and new
-artworks. These multiple representations of musical performance allow
-the curation and analysis of an emerging improvised practice.
+groups.''~\cite{Borgo:2006fv} 
+\end{quote}
+These communities of practitioners, listeners, and concert organisers
+are the curators of the free-improvised music world. We argue that the
+ability to thoroughly document touch-screen movements of improvising
+ensembles enhances the ability of such a community to develop this
+artistic practice through archiving, replaying, and re-synthesising
+performances. In Sections \ref{sec:protocols} and \ref{sec:analysis},
+we describe our approach to recording improvised touch-screen
+performances and transforming such transcriptions into animations,
+gestural scores, and new artworks. These multiple representations of
+musical performance allow the curation and analysis of an emerging
+improvised practice.
 
 \section{Towards a protocol for touch-screen musical performance}
 \label{sec:protocols}
@@ -475,19 +455,21 @@ the curation and analysis of an emerging improvised practice.
 
 Musical data has been abstracted from the temporality of performance
 for centuries since the development of musical notation. Mechanical
-instruments such as music boxes and barrel organs developed in the
-18th century~\cite{Fowler:1967kq} first allowed music to be
+instruments such as music boxes and barrel organs, developed in the
+18th century~\cite{Fowler:1967kq}, first allowed music to be
 ``programmed'' rather than performed. More refined mechanical
 instruments such as the ``reproducing piano'', which appeared at the
 turn of the 20th century~\cite{Kapur:2005fk}, allowed a musician's performance to be
 automatically transcribed and converted into a paper ``piano roll''
 that could be re-played many times. All of these technologies have had
-an impact in the study of music as well as it's performance. Musical
+an impact in the study of music as well as its performance. Musical
 notation enabled the field of musicology, where the musical score has
 traditionally been priveleged as the canonical representation of a
 musical work. The piano-roll performances of many famous pianists were
-made before audio recording was available or widespread and have been
+made before audio recording was widespread and have been
 used to analyse their performance styles.
+
+% citation for piano roll.
 
 An important antecedent of our work was the
 MIDI~\cite{midi1996complete} (Musical Instrument Digital Interface)
@@ -499,13 +481,13 @@ digital recording systems. While this standard was intended as a
 control interface for live performance or recording, it was subverted
 by digital artists and researchers who recognised that the MIDI trace
 of a musical performance could be used for other purposes. MIDI was
-originally designed to be used with a physical serial connection
+originally designed to be used with a physical serial connection,
 however virtual MIDI connections are commonly used to connect multiple
-pieces of software on one computer system and a networked version of
-MIDI also exists\cite{Lazzaro:2004pb}.
+pieces of software and to other computers over a
+network\cite{Lazzaro:2004pb}.
 
 While the success of MIDI is ongoing, the semantics of the protocol is
-mostly restricted to a keyboard and note perspective on musical data.
+mostly restricted to a keyboard-and-note perspective on musical data.
 The typical MIDI interactions are ``note on'' and ``note off''
 messages, each of which contain a pitch and dynamic (volume) value.
 Changing parameters while a note is playing can be achieved by
@@ -513,29 +495,28 @@ simultaneously sending one of a limited number of ``continuous
 control'' messages while the ``note on'' is held. In an effort to
 develop a semantics-free format for musical control that better
 reflected the needs of modern computer music systems,
-OSC~\cite{osc-nime2009} (Open Sound Control) was developed which
-defines a standard message format but with the specific content of the
-messages up to the application developer. This flexibility has
-contributed to the success of OSC not just in computer music, but in
-professional applications such as show control~\cite{schmeder2010best}
-although it is not commonly available in commercial electronic
-instruments.
+OSC~\cite{osc-nime2009} (Open Sound Control) was developed. This
+standard defines a message format but with the specific content of the
+messages up to the application developer. The flexibility of OSC has
+contributed to its success not just in computer music, but in
+professional applications such as show
+control~\cite{schmeder2010best}, although it is not commonly used in
+commercial electronic instruments.
 
 Some have attempted to define protocols using OSC to standardise
 interaction with certain types of interface. TUIO~\cite{TUIO_KBBC05}
-is one such protocol designed for table-top interfaces where special
-objects, ``fiducial markers'', could be tracked as well as finger
-touches. Unlike MIDI, TUIO does not define the purpose of messages but
-communicates only information about basic components that the
-designers expected would be common to most table-top interfaces. The
-TUIO protocol sends groups of messages together that encompass the
-state of the whole table-top interface. Most importantly, one
-\texttt{set} message is sent for each object on the surface that has
-changed position. A \texttt{set} message includes
+is one such protocol designed for table-top interfaces where fiducial
+markers and finger touches can be tracked. Unlike MIDI, TUIO does not
+define the purpose of messages but communicates only information about
+basic components that the designers expected would be common to most
+table-top interfaces. The TUIO protocol sends groups of messages
+together that encompass the state of the whole table-top interface.
+Most importantly, one \texttt{set} message is sent for each object on
+the surface that has changed position. A \texttt{set} message includes
 identification and position information about the object being tracked
 as well as precalculated data such as velocity, acceleration, and
 rotation. This simplifies the requirements for software receiving TUIO
-which may not have to keep track of objects in between bundles of of
+which may not have to keep track of objects in between bundles of
 messages or worry about errors due to messages arriving out of order.
 
 \begin{figure}
@@ -559,23 +540,24 @@ messages or worry about errors due to messages arriving out of order.
 % \subsection{Touch Screen Data}
 % \label{subsec:touch-screen-data}
 
-Like TUIO our protocol for logging touch-screen performances needed to
-capture the fundamental interactions occuring on the touch-screen, not
-how these interactions are interpreted by the application currently
-running on the device. In Apple iOS devices, data collected from the
-multitouch digitiser in front of the screen is interpreted by the
-operating system which keeps track of individual touches and divides
-the incoming data into events~\cite{AppleDeveloper:2015rm}. Software
-developers can implement a set of callback functions to access these
-events individually. So-called \texttt{UIEvent}s track the state of
-touches on the screen - they ``begin'', ``move'', ``end'', and may be
-``cancelled'' if they are mis-recognised. For the purposes of
-designing software for free-form touch improvisation, only the first
-three states are of interest. The touch-data objects described by
-these events have a record of their current as well as previous
-location on the screen. A value proportional to instantaneous velocity
-of moving touches can be easily calculated by finding the length of
-the vector from the previous location to the new.
+As described in \ref{subsec:metatone-log} below, our protocol for
+logging touch-screen performances needed to capture the fundamental
+interactions occuring on the touch-screen, not how these interactions
+are interpreted by the application currently running on the device. In
+Apple iOS devices, data collected from the multitouch digitiser in
+front of the screen is interpreted by the operating system which keeps
+track of individual touches and divides the incoming data into
+events~\cite{AppleDeveloper:2015rm}. Software developers can implement
+a set of callback functions to access these events individually.
+So-called \texttt{UIEvent}s track the state of touches on the screen -
+they ``begin'', ``move'', ``end'', and may be ``cancelled'' if they
+are mis-recognised. For the purposes of designing software for
+free-form touch improvisation, only the first three states are of
+interest. The touch-data objects described by these events have a
+record of their current as well as previous location on the screen. A
+value proportional to instantaneous velocity of moving touches can be
+easily calculated by finding the length of the vector from the
+previous location to the new.
 
 \subsection{Metatone Apps}
 \label{subsec:metatone-apps}
@@ -599,7 +581,7 @@ the vector from the previous location to the new.
 \label{fig:metatone-apps}
 \end{figure}
 
-The touch-screen device chosen for our research and performances was
+The touch-screen device chosen for our performances was
 the Apple iPad. A variety of apps, including four shown in Figure
 \ref{fig:metatone-apps}, have been developed so far for
 performances with Ensemble Metatone and other groups. All of the Metatone
@@ -679,7 +661,7 @@ this protocol was extended to document the performers' gestural and
 ensemble states and app-to-app interactions sent between iPads. A
 complete listing of our OSC messaging scheme is given in Table
 \ref{oscschema}. When our server receives one of these OSC messages,
-it assigns it a timestamp and records it to a text file for later
+it assigns a timestamp and records it to a text file for later
 analysis. Each line of the text file is written in the CSV (comma
 separated values) format. Although the different aspects of the
 performance are recorded using different numbers of parameters, these
@@ -754,15 +736,15 @@ the performers~\cite{Martin:2015jk}. Our protocol for performance
 logging includes three OSC messages from the server to the iPad apps.
 Gesture classifications are returned to the iPads each second with OSC
 \texttt{/gesture} messages; whenever a new musical section is
-detected, the server sends a \texttt{/event/new\_idea} message to all
-connected iPads; finally, various measures of the ensemble state are
+detected, the server sends an \texttt{/event/new\_idea} message to all
+connected iPads. Various measures of the ensemble state are
 returned to the iPads each second using the OSC address,
-\texttt{/state}, although this functionality is still in development.
+\texttt{/state}.
 
-This scheme for logging touch-interactions (see table \ref{oscschema})
+This scheme for logging touch-interactions (see Table \ref{oscschema})
 was chosen to study the process of improvising with iPad instruments
 and not necessarily for replaying performances. Other aspects of the
-touch-screen state such as unique identifiers for each touch point are
+touch-screen state, such as unique identifiers for each touch point, are
 not tracked, nor are the exact pitches available on screen for each
 player. Multitracked audio recordings of performance are deemed to be
 sufficient record of the particular sounds created during the
@@ -780,7 +762,7 @@ along with audio and video recordings.
 
 Our system of iPad apps and server software records all touch events,
 UI interactions, and app-to-app communications that occur during
-improvised performances with our iPad apps and records them in CSV
+improvised performances and records them in CSV
 format. Our server software analyses these gestures during the
 performance to produce more information about the performers'
 interactions with the touch-screen devices and the state of the whole
@@ -842,20 +824,20 @@ interpret sequences of movements with a beginning and ending as a
 command in a computing interface\footnote{This includes Apple's built
   in \texttt{UIGestureRecognizer}~\cite{AppleDeveloper:2015rm}
   class.}, our classification system aims to segment a continuous
-stream of free form gestures. For this reason, our vocabulary seeks to
+stream of free-form gestures. For this reason, our vocabulary seeks to
 identify ``tapping'', which could continue indefinitely, rather than
 ``tap'' which is completed after one touch interaction. In this way,
 our touch-screen gestural vocabulary resembles some of the snow
 gestures of \emph{Syntax of Snow}~\cite{Burtner:2011fk} which also are
-open ended which respect to the number or length of interactions.
-
+open ended with respect to the number or length of interactions.
 Applying this gestural classification scheme to touch-screen
 performances results in a new representation of the performance, that
-is, a time-series of gesture classes at 1 second intervals for each
-performer in the ensemble. Although this time-series does not contain
+is, a time series of gesture classes at one-second intervals for each
+performer in the ensemble. Although this time series does not contain
 the details of each performer's interactions, it can still serve as a
 kind of musical score for performances, albeit a non-traditional one.
-When a graphical plot is created of such a time-series, the score
+
+When a graphical plot is created of such a time series, the score
 starts to bear resemblence to the time-space graphical scores of
 contemporary classical music. In the gesture-score plots of Figure
 \ref{gesturescore}, each performer's gestures are represented by a
@@ -865,9 +847,9 @@ temporal representations like audio and video recordings. In Figure
 \ref{gesturescore}, it is clear when all performers are focussed on
 the same broad gesture groups as their lines are on close levels of
 the plot. When one performer breaks out for a solo idea, their line
-moves up or down, or might move to the ``nothing'' level when they
-have stopped playing altogther. Sometimes the performers split into
-sub ensembles exploring separate groups of gestures. Perhaps most
+moves up or down, or might move to the ``nothing'' level if they 
+have stopped playing. Sometimes the performers split into
+sub-ensembles, exploring separate groups of gestures. Perhaps most
 interesting are the broadest structural elements where all members of
 the ensemble change gestures together over a short period of time.
 Such moments of increased change seem to segment the improvisations
@@ -880,16 +862,16 @@ Pressing~\cite{Pressing:1988uo}, Stenstr\"om~\cite{Stenstrom:2009xy},
 Bailey~\cite{Bailey:1993zl}, and others, it has not previously been
 observed in an automatically-generated gestural transcription.
 
-Since these gestural scores are so helpful in understanding at a
-glance the overall flow of improvised touch-screen performances, they
+Since these gestural scores are so helpful in understanding, at a
+glance, the overall flow of improvised touch-screen performances, they
 serve as more useful archival documents of performances than, for
 example, still photographs of the stage setup. Rather than simply
 recording the location and setting of the performers, gesture scores
 store a high-level view of the performers' gestures throughout a whole
 performance. In fact, it would be possible to use gesture scores as
 the reference material for new musical performances. An ensemble of
-touch-screen musicians could simply view a print out of the plot as a
-graphical score and play through the sequence of gestures.
+touch-screen musicians could simply read a gesture-score, as they
+would a graphical score, and play through the sequence of gestures.
 Alternatively, a computerised score display with a synchronised cursor
 could be used to assist the performers or even be integrated into the
 touch-screen interface as in the Decibel
@@ -954,27 +936,24 @@ Out of several experimental tests on transition matrices, our
 \emph{flux} measure~\cite{Martin:2015jk} has proven to be extremely
 promising. Flux is a measure of the rate of gestural change calculated
 by dividing the number of transitions from one gesture to another by
-the self-transitions where a gesture is followed by itself. The value
-of flux is maximised at 1 when no gesture follows itself, and is
-minimised at 0 when each member of the ensemble stays on the same
-gesture for the whole window of calculation. When applied on a window
-of calculation that slides over a whole performance, peaks in flux
-tend to match moments where the ensemble shifts to a new section. In
-Metatone Classifier we have implemented a strategy that tracks sudden
-increases in flux to identify these new ideas.
+the self-transitions where a gesture is followed by itself. The flux
+of a transition matrix has a maximum of one, when no gesture follows
+itself, and a minimum of zero, when each member of the ensemble stays
+on the same gesture for the whole window of calculation. When applied
+to a window of calculation that slides over a whole performance, peaks
+in flux tend to match moments where the ensemble shifts to a new
+section. In Metatone Classifier, we have implemented a strategy that
+tracks sudden increases in flux to identify these new ideas.
 
 When our software identifies one of these events during a performance,
-an OSC message is sent to each of the connected iPad apps. As part of
-our research program, we have experimented with a number of responses
-in the app interfaces for these messages~\cite{Martin:2015jk}. The
-apps might display a series of new notes to reward the performers or
-progress through a composition of sound scapes to encourage further
-exploration. One controversial app was designed to disrupt the
-performers while a new-idea message had \emph{not} been triggered to
-forcefully encourage them to try something new.
+an OSC message is sent to each of the connected iPad apps. We have
+experimented with a number of responses in the app interfaces for
+these messages~\cite{Martin:2015jk}. The apps might display a series
+of new notes to reward the performers, or progress through a
+composition of sound scapes to encourage further exploration.
 
 As with all of our app-server interactions, new-idea messages are
-logged in our performance protocols and have been useful in later
+logged to our performance protocols and have been useful in later
 analysis of improvised performances. These messages are shown in
 Figure \ref{gesturescore} as vertical red lines. Since calculations
 over several seconds may identify the same increase in flux, new-idea
@@ -998,7 +977,6 @@ every ten seconds.
     May 2014.}
   \label{fig:metatone-visualisations}
 \end{figure}
-
 
 To understand the structure of the improvised performances we have
 developed method for translating touch and gesture protocols into
@@ -1037,7 +1015,7 @@ useful when synchronised with the audio and video recordings of
 performances and displayed together. Figure
 \ref{fig:metatone-visualisations} shows stills from hybrid
 visualisations of three different performances. Each shows an
-alternative arrangement of visualisations from our performances
+alternative arrangement of visualisations from our performance
 protocols and multiple camera angles of video. Such videos have been
 used within our research group to study the performances of Ensemble
 Metatone and other groups that have performed with our iPad apps.
@@ -1054,12 +1032,11 @@ performance can be examined simultaneously. This new and useful
 representation of performances is only possible because of the
 performance logging protocol that we have designed.
 
-It is possible that these visualisations
-could also be used in a live context where they are projected on large
-screen for the audience to view or even superimposed on the
-performers' iPad touch screens. A prototype touch visualisation 
-has been developed from our touch visualising software and has been
-used as a backdrop projection in some performances, but the
+It is possible that these visualisations could also be used in a live
+context where they are projected on large screen for the audience to
+view or even superimposed on the performers' iPad touch screens. A
+prototype touch visualisation has been developed from our software and
+has been used as a backdrop projection in some performances, but the
 implications and affordances of this addition to the performance have
 not been fully explored.
 
@@ -1082,7 +1059,7 @@ artworks and perhaps even informing the direction of future
 performances in the free-improvisation community.
 
 We have described our techniques for transforming logs into gestural
-time-series and graphical gesture-scores, and animated visualisations
+time series and graphical gesture-scores, and animated visualisations
 that afford the viewer a new performer-centric perspective on the
 touch improvisations. Animated visualisations have been
 crucial in our work to understand the nature of touch-screen
@@ -1109,6 +1086,8 @@ to preserve touch-screen music but to create it.
 
 %\bibliographystyle{spphys}
 \bibliographystyle{plain}
+%\bibliographystyle{spbasic}
+%\bibliographystyle{spmpsci}
 \bibliography{2013ComputerMusic}
 \end{document}
 
