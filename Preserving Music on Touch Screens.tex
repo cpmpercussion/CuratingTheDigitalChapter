@@ -94,8 +94,8 @@ as a different work, the output of free-improvisation ensembles is
 often represented as audio recordings with liner notes that document
 changes in personnel or instrumentation. These notes are frequently
 the main indicator of difference between works. Such archives of
-free-improvised performances can be time-consuming to browse due to
-the temporal nature of the recordings and difficult to analyse,
+free-improvised performances can be time-consuming to browse, due to
+the temporal nature of the recordings, and difficult to analyse,
 particularly when performers use similar-sounding electro-acoustic
 instruments. When performing with computer-based instruments, however,
 musicians have the opportunity to record a musical work in an
@@ -263,7 +263,8 @@ It is notable that many of the gestures indicated in Burtner's score
 could be interpreted as being continuous rather than ceasing after a
 following the instruction. For example, ``fingers tapping'' should
 probably be interpreted not as one or two taps but as a continual
-tapping until the performer reaches the next instruction. In HCI
+tapping until the performer reaches the next instruction. In Human Computer 
+Interaction (HCI) 
 research, gestures on touch-screens are frequently characterised as a
 having a short and finite expression such as the ``unistroke''
 gestures described by Wobbrock et al.~\cite{Wobbrock:2007kq}. These
@@ -292,10 +293,10 @@ interactions.
 \subsection{Free-Improvised Performance}
 \label{subsec:free-improvisation}
 
-Free improvised performance has been defined as the performance of
+Free-improvised performance has been defined as the performance of
 music ``without any restrictions regarding style or genre and without
 having predetermined what is to be played''~\cite{Stenstrom:2009xy}.
-This definition is a typical of the field, but it frames
+This definition is typical of many, but it frames
 free-improvisation subtractively: improvisation is ``regular''
 performance minus restrictions. To understand what is really exciting
 about free-improvisation as a mode of artistic expression and as a
@@ -348,7 +349,7 @@ game.''~\cite{Mazzola:2009cr}
 In the present research, an improvising percussion group was not only
 used to create new music but to explore and evaluate touch-screen
 instruments running on Apple iPads. Ensemble Metatone was brought
-together in Canberra, Australia to study the process of performing
+together in Canberra, Australia, to study the process of performing
 free-improvised music starting with a prototype app and, through a
 process of iterative design, eventually presenting concerts with
 multiple apps. The members of the group (including one of the authors)
@@ -402,7 +403,7 @@ can be generated from this archive of performance documentation.
 \label{subsec:curating}
 
 Although the field of improvised performance has a developing
-theoretical background and many highly regarded practitioners,
+theoretical background and many highly-regarded practitioners,
 particular artistic expressions tend toward the ephemeral. We advocate
 an expanded method of documenting improvised music that encodes not
 just the sounds made in the performance space, but performers'
@@ -534,8 +535,28 @@ the surface that has changed position. A \texttt{set} message includes
 identification and position information about the object being tracked
 as well as precalculated data such as velocity, acceleration, and
 rotation. This simplifies the requirements for software receiving TUIO
-which may not have to keep track of objects in between bundles of
-messages or worry about errors due to messages arriving out of order.
+which does not have to keep track of objects in between bundles of
+messages and does not need to worry about errors due to messages arriving out of order.
+
+
+As described in \ref{subsec:metatone-log} below, our protocol for
+logging touch-screen performances needed to capture the fundamental
+interactions occuring on the touch-screen, not how these interactions
+are interpreted by the application currently running on the device. In
+Apple iOS devices, data collected from the multitouch digitiser in
+front of the screen is interpreted by the operating system which keeps
+track of individual touches and divides the incoming data into
+events~\cite{AppleDeveloper:2015rm}. Software developers can implement
+a set of callback functions to access these events individually.
+So-called \texttt{UIEvent}s track the state of touches on the screen -
+they ``begin'', ``move'', ``end'', and may be ``cancelled'' if they
+are mis-recognised (Figure~\ref{touch-event-code-listing}). For the purposes of designing software for
+free-form touch improvisation, only the first three states are of
+interest. The touch-data objects described by these events have a
+record of their current as well as previous location on the screen. A
+value proportional to instantaneous velocity of moving touches can be
+easily calculated by finding the length of the vector from the
+previous location to the new.
 
 \begin{figure}
 \begin{verbatim}
@@ -557,25 +578,6 @@ messages or worry about errors due to messages arriving out of order.
 
 % \subsection{Touch Screen Data}
 % \label{subsec:touch-screen-data}
-
-As described in \ref{subsec:metatone-log} below, our protocol for
-logging touch-screen performances needed to capture the fundamental
-interactions occuring on the touch-screen, not how these interactions
-are interpreted by the application currently running on the device. In
-Apple iOS devices, data collected from the multitouch digitiser in
-front of the screen is interpreted by the operating system which keeps
-track of individual touches and divides the incoming data into
-events~\cite{AppleDeveloper:2015rm}. Software developers can implement
-a set of callback functions to access these events individually.
-So-called \texttt{UIEvent}s track the state of touches on the screen -
-they ``begin'', ``move'', ``end'', and may be ``cancelled'' if they
-are mis-recognised. For the purposes of designing software for
-free-form touch improvisation, only the first three states are of
-interest. The touch-data objects described by these events have a
-record of their current as well as previous location on the screen. A
-value proportional to instantaneous velocity of moving touches can be
-easily calculated by finding the length of the vector from the
-previous location to the new.
 
 \subsection{Metatone Apps}
 \label{subsec:metatone-apps}
@@ -600,9 +602,9 @@ previous location to the new.
 \end{figure}
 
 The touch-screen device chosen for our performances was the Apple
-iPad. A variety of apps, including four shown in Figure
-\ref{fig:metatone-apps}, have been developed so far for performances
-with Ensemble Metatone and other groups. All of the Metatone apps
+iPad. A variety of apps, including the four shown in Figure
+\ref{fig:metatone-apps}, have been developed for performances
+by Ensemble Metatone and other groups. All of the Metatone apps
 share the same fundamental mode of interaction: a tap triggers a
 single sound with a percussive envelope (i.e. a sharp attack and long
 decay), while swiping plays a continuous sound with volume related to
@@ -625,16 +627,17 @@ Swedish forests, with samples of bird calls and field recordings from
 the location as well as xylophone and woodblock samples. These three
 apps used UI switches to control a looping feature that would repeat
 tapped notes and UI buttons to shuffle the sounds available to the
-player from a palette of sonic material. \emph{Snow Music} allows
+player from a palette of sonic material. \emph{Snow Music}, originally developed with the
+percussion group \emph{Ensemble Evolution}~\cite{Martin:2012fk},
+ allowed
 percussionists to manipulate samples of snow sounds (similarly to
-Burtner's amplified snow) and was originally developed with the
-percussion group \emph{Ensemble Evolution}~\cite{Martin:2012fk}. The
-app allows performers to switch on algorithmically produced backing
-soundtracks to accompany themselves. \emph{PhaseRings} is the latest
+Burtner's amplified snow) and to switch on algorithmically-produced backing
+soundtracks to accompany themselves. 
+\emph{PhaseRings} is the latest
 Metatone app and consists of an annular interface for performing with
 pitched percussion sounds. Each ring in the interface corresponds to a
-different pitch, performers configure the app with a sequence of
-musical scales and the app displays a subset pitch-rings taken from
+different pitch. Performers configure the app with a sequence of
+musical scales and the app displays a subset of pitch-rings taken from
 those scales with changes in the ring setup triggered by network
 interactions or UI elements\footnote{The Metatone apps are available
   on the iTunes apps store and links can be found on
@@ -655,14 +658,14 @@ which is the preferred method due to increased reliability of
 transmission and the ability to easily open a bi-directional
 connection with a remote server. The Metatone apps automatically find
 the server and other active Metatone apps on their local network using
-Bonjour (zero-configuration networking). The interactions between the
-Metatone apps themselves and the apps and Metatone Classifier have
+Bonjour (zero-configuration networking). The app-to-app and app-to-server
+interactions have 
 been documented elsewhere~\cite{Martin:2015mz,Martin:2015jk}. While
 the designs of these interactions are outside of the scope of the
 present chapter, it suffices to say that our goal has been to
 introduce features that synchronise changes in the app's functionality
 throughout performances in response to individual and ensemble
-interactions. These features are designed to emphasise and enhance the
+interactions. These features have been designed to emphasise and enhance the
 sense of group-mind that has been observed in performances of ensemble
 free-improvisation~\cite{Borgo:2006fv}. 
 
@@ -674,7 +677,7 @@ Over our earliest rehearsals with Ensemble Metatone and the
 touch-screen information from each performer's iPad that mirrors Apple
 iOS's touch-event handling framework. The information is sent to a
 central server using the OSC data format. As we developed more
-features for our apps and our server software, Metatone Classifier,
+features for our apps and our (Metatone Classifier) server software
 this protocol was extended to document the performers' gestural and
 ensemble states and app-to-app interactions sent between iPads. A
 complete listing of our OSC messaging scheme is given in Table
@@ -733,7 +736,7 @@ events. \texttt{touchesCancelled} messages are ignored.
  
 Each of our iPad apps contains a small number of button and switch UI
 elements that are used in the performances to activate looping
-functions, algorithmically generated backing sounds, and to change the
+functions and algorithmically-generated backing sounds, and to change the
 timbre and pitch of sounds available through the touch interface. The
 performers' interactions with these elements are recorded using
 \texttt{/switch} messages which record the iPad device ID, the name of
@@ -748,7 +751,7 @@ during performances. The server tracks these gestures to identify the
 whole state of the whole ensemble and, in particular, identify moments
 of peak gestural change where the group may have moved onto a new
 musical section. While this information is recorded for later
-analysis, it is also returned to the performers' apps, which use it to
+analysis, it is also returned to the performers' apps, and the apps use it to
 update their interfaces and present new performance possibilities to
 the performers~\cite{Martin:2015jk}. Our protocol for performance
 logging includes three OSC messages from the server to the iPad apps.
@@ -759,7 +762,7 @@ connected iPads. Various measures of the ensemble state are
 returned to the iPads each second using the OSC address,
 \texttt{/state}.
 
-This scheme for logging touch-interactions (see Table \ref{oscschema})
+The scheme for logging touch-interactions (see Table \ref{oscschema})
 was chosen to study the process of improvising with iPad instruments
 and not necessarily for replaying performances. Other aspects of the
 touch-screen state, such as unique identifiers for each touch point, are
@@ -767,7 +770,7 @@ not tracked, nor are the exact pitches available on screen for each
 player. Multitracked audio recordings of performance are deemed to be
 sufficient record of the particular sounds created during the
 performance while the touch protocols store the details of performers'
-interaction with the instruments that the audio recording cannot.
+interaction with the instruments --- something the audio recording cannot achieve.
 While our protocols were created for research purposes, the CSV
 storage format allows us to easily transform these logs into
 alternative representations of performances. The next section will
@@ -780,7 +783,7 @@ along with audio and video recordings.
 
 Our system of iPad apps and server software records all touch events,
 UI interactions, and app-to-app communications that occur during
-improvised performances and records them in CSV format. These
+improvised performances in a CSV format. These
 recordings are mutable new-media objects and, as suggested by Manovic,
 by transcoding these objects ``the logic of a computer can be expected
 to significantly influence the traditional cultural logic of
@@ -788,7 +791,7 @@ media''~\cite{Manovich:2002ly}.
 
 In this section we will describe ways in which our performance
 protocols can be transcoded into new representations of the
-improvisations, both in real-time during the performance and
+improvisations, both in real-time, during a performance, and
 afterwards. We will explain how gestural classifications of each
 performer's touches leads to graphical ``scores'' and animated
 visualisations provide new perspectives on the ensemble interaction.
