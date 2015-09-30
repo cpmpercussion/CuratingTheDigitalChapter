@@ -850,7 +850,7 @@ procedure~\cite{Martin:2015jk}.
 The nine gesture classes are based on those discovered through
 qualitative analysis of Ensemble Metatone's earliest series of
 rehearsals~\cite{Martin:2014jk}. The vocabulary focusses on three
-fundamental touch gesture groups: tapping, swiping, and swirling, and
+fundamental touch-gesture groups: tapping, swiping, and swirling, and
 it includes several variations of each group. Unlike other systems for
 gesture recognition~\cite{Wobbrock:2007kq} which are designed to
 interpret sequences of movements with a beginning and ending as a
@@ -897,7 +897,7 @@ observed in an automatically-generated gestural transcription.
 
 Since these gestural scores are so helpful in understanding, at a
 glance, the overall flow of improvised touch-screen performances, they
-serve as more useful archival documents of performances than, for
+serve as more useful archival documents of performances rather than, for
 example, still photographs of the stage setup. Rather than simply
 recording the location and setting of the performers, gesture scores
 store a high-level view of the performers' gestures throughout a whole
@@ -1012,33 +1012,31 @@ every ten seconds.
 \end{figure}
 
 To understand the structure of the improvised performances we have
-developed method for translating touch and gesture protocols into
+developed a method for translating touch and gesture protocols into
 animated visual represenations of the performance that can accompany
 the audio and video recordings in the documentation of each
 performance. Two animations are typically produced for each
-research-focussed performance one of the gesture classifications and
-new-idea divisions and another for the performer's touches. The
-Processing~\cite{Reas:2006kq} programming language has been used to
-produce software that generates both animations.
-
-The first visualisation is an animated version of the gesture-scores
+research-focussed performance using the 
+Processing~\cite{Reas:2006kq} programming language.
+The first is an animated version of the gesture-scores
 discussed in Section \ref{subsec:gesture-classification}, with an
 integrated playhead that indicates the current position in the
-performance. The second animation visualises the logs of performers'
+performance. 
+
+The second animation visualises the logs of performers'
 touches over each performance. Our program reads a captured log file
 and renders an animation of all four players' touches overlaid in the
 space of one iPad screen with the different players distinguished by
 colour. Each touch point is represented by a circle that fades away
-for about a second allowing different types of swirl, swipe, and tap
+after about a second allowing different types of swirl, swipe, and tap
 gestures to be distinguished at a glance. The software also draws a
 date and time-stamp in each frame as well as text notification of app
 and switch messages.
-
 This touch animation presents an entirely new view of the
 performance which was not visible to the performers or audience on the
 day. As all the touch movements are layered in one performance area it
-is immediately clear when performers mimic each other, form sections,
-or experiment with a new musical idea. From the researcher's point of
+is immediately clear when performers mimic each other, when they form sections,
+or when they experiment with a new musical idea. From the researcher's point of
 view, the animation also gives a ``performer's perspective'' on touch
 interaction, allowing us to connect patterns of touches with musical
 gestures that the performers discuss after rehearsals.
@@ -1049,7 +1047,7 @@ performances and displayed together. Figure
 \ref{fig:metatone-visualisations} shows stills from hybrid
 visualisations of three different performances. Each shows an
 alternative arrangement of visualisations from our performance
-protocols and multiple camera angles of video. Such videos have been
+protocols and multiple camera-angles of video. Such videos have been
 used within our research group to study the performances of Ensemble
 Metatone and other groups that have performed with our iPad apps.
 While the video component of these hybrid visualisations allows us to
@@ -1063,15 +1061,15 @@ visualisation becomes a kind of ``Seeing Space''~\cite{Victor:2014sf}
 for improvised touch performances where multiple dimensions of the
 performance can be examined simultaneously. This new and useful
 representation of performances is only possible because of the
-performance logging protocol that we have designed.
+performance-logging protocol that we have designed.
 
-It is possible that these visualisations could also be used in a live
-context where they are projected on large screen for the audience to
+It is possible that the visualisations described here could also be used in a live
+performance context where they could be projected onto large screen for the audience to
 view or even superimposed on the performers' iPad touch screens. A
 prototype touch visualisation has been developed from our software and
 has been used as a backdrop projection in some performances, but the
 implications and affordances of this addition to the performance have
-not been fully explored.
+not yet been fully explored.
 
 \section{Conclusions}
 
@@ -1081,44 +1079,47 @@ implemented in our Metatone Classifier software and used to record
 more than 80 performances by Ensemble Metatone and other groups. Our
 protocol records all touch interactions during each performance as
 well as network interactions between the performers' apps and the
-server software. As each touch-interaction in our apps maps directly
-to a sound and network interactions are key to our ensemble
-improvisations, our protocol is a much more appropriate record of our
-performance than other systems for tracking musical performances such
-as MIDI. Our archive of performance protocols encode aspects of the
-improvisations that are not accessible in traditional archives of
+server software.
+Our protocol is a much more appropriate record of our
+performances than conventional  systems, such
+as MIDI,  because each touch-interaction maps directly
+to sound,  and because network interactions are key to our ensemble
+improvisations. Our archive of performance protocols encodes aspects of the
+improvisations that are not accessible in traditional 
 recordings and that align with theoretical models of free-improvised
-music. They are also new-media objects satisfying Manovic's principles
+music. The performance logs in our archive are also new-media objects satisfying Manovic's principles
 for new media and can be transcoded into multiple alternative
-representations of the performance. This leads to increased
-understanding of touch-screen improvisation, the creation of
-derivitive artworks, and informs the direction of future touch-screen
-musical performances.
+representations of the performance. Such transcoding can lead to increased
+understanding of touch-screen improvisation and to the creation of
+derivitive artworks.
 
-We have described our techniques for transforming logs into gestural
-time series, graphical gesture-scores, and animated visualisations
+%and these post-processed artefacts can inform the direction of future touch-screen
+%musical performances.
+
+In this chapter we have also presented visualisation techniques for transforming logs into gestural
+time series, graphical gesture-scores, and animations
 that afford the viewer a new performer-centric perspective on the
 touch improvisations. Animated visualisations have been crucial in
-understanding the nature of touch-screen improvisation. These allow
-the touches of all performers to be viewed simultaneously and clearly
-show the vocabulary of gestures that the ensemble explores throughout
+understanding the nature of touch-screen improvisation. These have allowed
+the touches of all performers to be viewed simultaneously and have clearly
+shown the vocabulary of gestures that the ensemble explores throughout
 a performance. The time series of gestures have allowed us to perform
-statistical investigations on the performances and uncover methods for
-automatically segmenting performances by moments of gestural change.
+statistical investigations on the performances to uncover methods for
+automatically segmenting performances by identifying moments of gestural change.
 Gesture-scores created by plotting these time series give an overview
 of a whole improvised performance reminiscent of graphical scores.
 These images allow multiple improvised performances to be directly
 compared at a glance and could even be used as the stimulus for future
 performances.
 
-Importantly, these techniques have not just been used archive our
-touch-screen performance but to develop an ongoing artistic practice.
+We emphasise that our protocol and our visualisation techniques have not just been used to archive
+touch-screen performances but also to develop an ongoing artistic practice.
 This has included new Metatone apps that react to gestural
 classifications and new-idea messages sent by the Metatone Classifier
 server in real-time during performances, live visualisations of
 touch-screen movements, and even compositions based on our vocabulary
 of touch-screen gestures. While our touch-screen protocols allow
-us to preserve past free-improvisations, they also suggest the form of
+us to archive, preserve and curate free-improvised performances, they also suggest new forms of
 exploratory iPad performances of the future.
 
 %\bibliographystyle{spphys}
