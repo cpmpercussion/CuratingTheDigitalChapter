@@ -235,12 +235,12 @@ instruments that can be implemented on touch-screen devices and can
 express a wide variety of playing styles.
 
 It is notable that many of the gestures indicated in Burtner's score
-could be interpreted as being continuous rather than ceasing after a
+could be interpreted as being continuous rather than ceasing after 
 following the instruction. For example, ``fingers tapping'' should
 probably be interpreted not as one or two taps but as a continual
 tapping until the performer reaches the next instruction. In Human Computer 
 Interaction (HCI) 
-research, gestures on touch-screens are frequently characterised as a
+research, gestures on touch-screens are frequently characterised as 
 having a short and finite expression such as the ``unistroke''
 gestures described by Wobbrock et al.~\cite{Wobbrock:2007kq}. These
 gestures are usually designed to execute a command in software (e.g.
@@ -326,7 +326,7 @@ designer~\cite{Martin:2014cr}. The performers of Ensemble Metatone
 settled on a combination of iPad and acoustic percussion instruments
 allowing them to choose from a wide palette of sound colours in their
 performances. The initial series of rehearsals was followed by a
-recorded research concert with a live audience, a series of
+recorded research concert with a live audience, and a series of
 performances at experimental art events. The recording of Metatone's
 research concert was released as a digital album in March
 2014~\cite{Ensemble-Metatone:2014sf}.
@@ -350,7 +350,7 @@ combinations of software features.
 
 The majority of these rehearsals and performances were audio and video
 recorded and also documented using our touch-screen performance
-protocol. To date, we have archived over 80 performances of our iPad
+protocol. To date, we have archived over 100 performances of our iPad
 apps using these tools forming a highly comprehensive corpus of work
 for studying improvisation on touch screens. In the following
 sections, we will describe forms of analysis and derivative works that
@@ -491,7 +491,7 @@ which does not have to keep track of objects in between bundles of
 messages and does not need to worry about errors due to messages arriving out of order.
 
 
-As described in \ref{subsec:metatone-log} below, our protocol for
+As described in Section \ref{subsec:metatone-log} below, our protocol for
 logging touch-screen performances needed to capture the fundamental
 interactions occurring on the touch-screen, not how these interactions
 are interpreted by the application currently running on the device. In
@@ -524,8 +524,7 @@ previous location to the new.
   \caption{Callback methods for accessing touch events in Apple
     iOS~\cite{AppleDeveloper:2015rm}. Our Metatone apps log each
     \texttt{touchesBegan}, \texttt{touchesMoved}, and
-    \texttt{touchesEnded} event.}
-\label{touch-event-code-listing}
+    \texttt{touchesEnded} event.\label{touch-event-code-listing}}
 \end{figure}
 
 \subsection{Metatone Apps}
@@ -666,7 +665,7 @@ unique OSC address of each type of message.
 \caption{Scheme for OSC messages from the Metatone iPad apps. The
   touch and touch ended messages record touch screen interactions
   directly from the iOS operating system (see Figure
-  /ref{touch-event-code-listing}. 
+  \ref{touch-event-code-listing}). 
   The ``device'' parameters are unique identifiers for each iPad in
   the ensemble.
 }
@@ -697,7 +696,7 @@ using the \texttt{/app} OSC address.
 As will be described in later sections, Metatone Classifier has the
 capacity to identify the performers' touch gestures in real-time
 during performances. The server tracks these gestures to identify the
-whole state of the whole ensemble and, in particular, identify moments
+state of the whole ensemble and, in particular, identify moments
 of peak gestural change where the group may have moved onto a new
 musical section. While this information is recorded for later
 analysis, it is also returned to the performers' apps, and the apps use it to
@@ -836,11 +835,11 @@ observed in an automatically-generated gestural transcription.
 
 Since these gestural scores are so helpful in understanding, at a
 glance, the overall flow of improvised touch-screen performances, they
-serve as more useful archival documents of performances rather than, for
+serve as more useful archival documents of performances than, for
 example, still photographs of the stage setup. Rather than simply
-recording the location and setting of the performers, gesture scores
+recording the location and setting of the performers, gesture-scores
 store a high-level view of the performers' gestures throughout a whole
-performance. In fact, it would be possible to use gesture scores as
+performance. In fact, it would be possible to use gesture-scores as
 the reference material for new musical performances. An ensemble of
 touch-screen musicians could simply read a gesture-score, as they
 would a graphical score, and play through the sequence of gestures.
@@ -868,7 +867,7 @@ picture''~\cite{Smith:1998ff}.
 \includegraphics[width=0.9\textheight,angle=90,origin=c]{figures/gesture-score-15-05-07-18-52-bw.pdf}
 %\includegraphics[height=0.9\textheight]{figures/score20130803vert}
 %\includegraphics[height=0.9\textheight]{figures/score20130803vert}
-\caption{Automatically generated gesture-score for two Ensemble
+\caption{Automatically generated gesture-scores for two Ensemble
   Metatone performances in 2014. Each line represents a
   single players' gestural classifications sampled once per second.
   The dotted vertical lines represent moments when a new-idea
@@ -887,7 +886,7 @@ picture''~\cite{Smith:1998ff}.
 \label{subsec:special-events}
 
 Some aspects of musical structure in touch-screen improvisations are
-visually apparent in graphical gesture scores, but it is also possible
+visually apparent in graphical gesture-scores, but it is also possible
 to automatically discriminate between different styles of touch-screen
 performance and identify transitions between multiple sections. To
 analyse such features, the performance of all performers in an
@@ -927,7 +926,7 @@ composition of soundscapes to encourage further exploration.
 As with all of our app-server interactions, new-idea messages are
 logged to our performance protocols and have been useful in later
 analysis of improvised performances. These messages are shown in
-Figure \ref{gesturescore} as vertical red lines. Since calculations
+Figure \ref{gesturescore} as dotted vertical lines. Since calculations
 over several seconds may identify the same increase in flux, new-idea
 messages are often grouped together closely although our apps are
 designed to ignore messages that arrive more frequently than once
@@ -943,7 +942,7 @@ every ten seconds.
   \includegraphics[width=0.9\textwidth]{figures/metatone-visualisation-youarehere-bw}
   \includegraphics[width=0.9\textwidth]{figures/metatone-visualisation-touchandtone-bw}
   \caption{Stills from hybrid visualisations of three Ensemble Metatone
-    performances showing video, touch animations, and gesture scores.
+    performances showing video, touch animations, and gesture-scores.
     From top to bottom, MetaLonsdale in Canberra, August 2013, Study
     in Bowls in Canberra, March 2014, and Touch and Tone in Boston,
     May 2014.}
@@ -993,7 +992,7 @@ While the video component of these hybrid visualisations allows us to
 recall the context of the concert and to observe the stage
 interactions and communications of the performers, the visualised
 touches and gestures have proven to be much more useful from a
-research standpoint. With the gesture score we can see performance
+research standpoint. With the gesture-score we can see performance
 interactions across time, and with the touch visualisation we can see
 across the performers' touch spaces. In this way, the hybrid
 visualisation becomes a kind of ``Seeing Space''~\cite{Victor:2014sf}
