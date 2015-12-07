@@ -26,7 +26,6 @@
 \usepackage{url}
 \usepackage{hyperref}
 \usepackage{doi}
-\usepackage{natbib}
 \usepackage{amssymb}
 \usepackage{epstopdf}
 \usepackage{wrapfig}
@@ -64,11 +63,11 @@
 % Use \authorrunning{Short Title} for an abbreviated version of
 % your contribution title if the original one is too long
 \institute{Charles Martin \at Research School of Computer Science, The
-  Australian National University, Canberra,
+  Australian National University, Canberra, Australia 
   \email{charles.martin@anu.edu.au} \and 
   Henry Gardner \at
   Research School of Computer Science, The Australian National
-  University, Canberra, \email{henry.gardner@anu.edu.au}}
+  University, Canberra, Australia \email{henry.gardner@anu.edu.au}}
 
 \maketitle
 \abstract*{\putabstract}
@@ -760,7 +759,7 @@ calculates feature vectors of descriptive statistics for each player
 from these five-second windows of recorded touch interactions. The
 feature vectors are classified using a Random Forest
 Classifier~\cite{Breiman:2001kx} from the Python \texttt{scikit-learn}
-library that is trained with examples of nine touch gestures recorded
+library~\cite{scikit-learn} that is trained with examples of nine touch gestures recorded
 by our app designer using a formal data collection
 procedure~\cite{Martin:2015jk}. 
 
@@ -1059,9 +1058,6 @@ While our touch-screen protocols allow us to archive, preserve and
 curate free-improvised performances, they also suggest new forms of
 exploratory iPad performances of the future.
 
-%\bibliographystyle{spphys}
-%\bibliographystyle{plain}
-\bibliographystyle{spbasic}
-%\bibliographystyle{spmpsci}
+\bibliographystyle{spmpsci}
 \bibliography{2013ComputerMusic}
 \end{document}
