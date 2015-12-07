@@ -26,10 +26,12 @@
 \usepackage{url}
 \usepackage{hyperref}
 \usepackage{doi}
-%\usepackage{natbib}
+\usepackage{natbib}
 \usepackage{amssymb}
 \usepackage{epstopdf}
 \usepackage{wrapfig}
+
+%\usepackage{showframe}
 %\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
 % see the list of further useful packages
 % in the Reference Guide
@@ -859,29 +861,21 @@ classical music, the composer Stuart S. Smith recalls allowing
 mind/ear polish the gesture, refining cliches out of the
 picture''~\cite{Smith:1998ff}.
 
-% what are the other possibilities for using gestural scores?
-
 \begin{figure}
 \centering
-%\includegraphics[width=0.9\textheight,angle=90,origin=c]{figures/Performance-14-03-17-18_09.pdf}
-\includegraphics[width=0.9\textheight,angle=90,origin=c]{figures/Performance-14-08-14-18_40-bw.pdf}
-\includegraphics[width=0.9\textheight,angle=90,origin=c]{figures/gesture-score-15-05-07-18-52-bw.pdf}
-%\includegraphics[height=0.9\textheight]{figures/score20130803vert}
-%\includegraphics[height=0.9\textheight]{figures/score20130803vert}
+\includegraphics[width=0.85\textheight,angle=90,origin=c]{figures/Performance-14-08-14-18_40-bw.pdf}
+\includegraphics[width=0.85\textheight,angle=90,origin=c]{figures/gesture-score-15-05-07-18-52-bw.pdf}
 \caption{Automatically generated gesture-scores for two Ensemble
   Metatone performances in 2014. Each line represents a
   single players' gestural classifications sampled once per second.
   The dashed vertical lines represent moments when a new-idea
   message was triggered by the Metatone Classifier Server. The left
-  score was a trio improvisation by Ensemble Evolution on 2014-08-14
+  score was a trio improvisation by Ensemble Metatone on 2014-08-14
   and the right score is of a quartet improvisation on 2015-05-07 by a
   group of research participants. See Table \ref{tab:gesture-classes}
   for definitions of the gestures given at each level of the y-axes.}
 \label{gesturescore}
 \end{figure}
-
-% \subsection{Tracking Gestures as a Score}
-% \label{subsec:gesture-scores}
 
 \subsection{Identifying Special Events}
 \label{subsec:special-events}
@@ -1066,8 +1060,8 @@ curate free-improvised performances, they also suggest new forms of
 exploratory iPad performances of the future.
 
 %\bibliographystyle{spphys}
-\bibliographystyle{plain}
-%\bibliographystyle{spbasic}
+%\bibliographystyle{plain}
+\bibliographystyle{spbasic}
 %\bibliographystyle{spmpsci}
 \bibliography{2013ComputerMusic}
 \end{document}
